@@ -1,0 +1,37 @@
+# Weather Station in Python
+
+print("===== WEATHER STATION =====")
+
+while True:
+    temperature = float(input("\nEnter temperature (°C): "))
+    humidity = float(input("Enter humidity (%): "))
+    pressure = float(input("Enter pressure (hPa): "))
+
+    print("\n--- WEATHER REPORT ---")
+    print("Temperature:", temperature, "°C")
+    print("Humidity   :", humidity, "%")
+    print("Pressure   :", pressure, "hPa")
+
+    if temperature >= 35:
+        condition = "Very Hot"
+    elif temperature >= 25:
+        condition = "Warm"
+    elif temperature >= 15:
+        condition = "Cool"
+    else:
+        condition = "Cold"
+
+    print("Condition  :", condition)
+
+    if humidity >= 80:
+        print("Humidity Status: High")
+    elif humidity >= 40:
+        print("Humidity Status: Normal")
+    else:
+        print("Humidity Status: Low")
+
+    choice = input("\nDo you want to check again? (yes/no): ")
+
+    if choice.lower() != "yes":
+        print("Weather Station Closed.")
+        break
